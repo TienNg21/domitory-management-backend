@@ -1,0 +1,35 @@
+{
+  "name": "group-32-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "start:dev": "nodemon ./src/app.js",
+    "migrateDB": "npx sequelize-cli db:migrate --config=config/config.cjs",
+    "seedDB": "npx sequelize-cli db:seed:all --config=config/config.cjs",
+    "dropDB": "npx sequelize-cli db:drop --config=config/config.cjs",
+    "migrateUndoDB": "npx sequelize-cli db:migrate:undo --config=config/config.cjs",
+    "migrateUndoAllDB": "npx sequelize-cli db:migrate:undo:all --config=config/config.cjs"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.2",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.1"
+  }
+}
